@@ -83,6 +83,10 @@
             transform: scale(1.1);
         }
 
+        .social-buttons a.whatsapp {
+            background-color: #25D366;
+        }
+
         .products-container {
             max-width: 1200px;
             margin: 2rem auto;
@@ -107,13 +111,16 @@
         .product-image {
             width: 100%;
             height: 200px;
-            background-color: var(--color-beige);
             border-radius: 8px;
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-brown-dark);
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .product-title {
@@ -124,6 +131,13 @@
 
         .product-weight {
             color: var(--color-orange);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            color: var(--color-green);
+            font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }
@@ -189,80 +203,110 @@
         <a href="https://www.instagram.com/raices_doradas_chips" target="_blank" title="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
+        <a href="https://wa.link/xw747a" class="whatsapp" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <div class="products-container">
         <!-- Papa Frita -->
         <div class="product-card">
-            <div class="product-image">Papa Frita 30gr</div>
+            <div class="product-image">
+                <img src="./img/papa1.png" alt="Papa Frita 30gr">
+            </div>
             <h3 class="product-title">Papa Frita</h3>
             <p class="product-weight">30 gramos</p>
+            <p class="product-price">3 Bs.</p>
             <p class="product-description">Deliciosas papas fritas crujientes, perfectamente sazonadas.</p>
             <button class="buy-button">Comprar</button>
         </div>
 
         <div class="product-card">
-            <div class="product-image">Papa Frita 100gr</div>
+            <div class="product-image">
+                <img src="./img/papa-100gr.jpg" alt="Papa Frita 100gr">
+            </div>
             <h3 class="product-title">Papa Frita</h3>
             <p class="product-weight">100 gramos</p>
+            <p class="product-price">10 Bs.</p>
             <p class="product-description">Porción familiar de nuestras papas fritas premium.</p>
             <button class="buy-button">Comprar</button>
         </div>
 
         <div class="product-card">
-            <div class="product-image">Papa Frita 250gr</div>
+            <div class="product-image">
+                <img src="./img/papa-250gr.jpg" alt="Papa Frita 250gr">
+            </div>
             <h3 class="product-title">Papa Frita</h3>
             <p class="product-weight">250 gramos</p>
+            <p class="product-price">20 Bs.</p>
             <p class="product-description">Tamaño ideal para compartir en reuniones y fiestas.</p>
             <button class="buy-button">Comprar</button>
         </div>
 
         <!-- Yuca Frita -->
         <div class="product-card">
-            <div class="product-image">Yuca Frita 30gr</div>
+            <div class="product-image">
+                <img src="./img/yuca1.png" alt="Yuca Frita 30gr">
+            </div>
             <h3 class="product-title">Yuca Frita</h3>
             <p class="product-weight">30 gramos</p>
+            <p class="product-price">3 Bs.</p>
             <p class="product-description">Yuca frita crujiente, un snack tradicional y delicioso.</p>
             <button class="buy-button">Comprar</button>
         </div>
 
         <div class="product-card">
-            <div class="product-image">Yuca Frita 100gr</div>
+            <div class="product-image">
+                <img src="./img/yuca-100gr.jpg" alt="Yuca Frita 100gr">
+            </div>
             <h3 class="product-title">Yuca Frita</h3>
             <p class="product-weight">100 gramos</p>
+            <p class="product-price">10 Bs.</p>
             <p class="product-description">Porción familiar de yuca frita, perfecta para compartir.</p>
             <button class="buy-button">Comprar</button>
         </div>
 
         <div class="product-card">
-            <div class="product-image">Yuca Frita 250gr</div>
+            <div class="product-image">
+                <img src="./img/yuca-250gr.jpg" alt="Yuca Frita 250gr">
+            </div>
             <h3 class="product-title">Yuca Frita</h3>
             <p class="product-weight">250 gramos</p>
+            <p class="product-price">20 Bs.</p>
             <p class="product-description">Gran porción de yuca frita para eventos especiales.</p>
             <button class="buy-button">Comprar</button>
         </div>
 
         <!-- Camote Frito -->
         <div class="product-card">
-            <div class="product-image">Camote Frito 30gr</div>
+            <div class="product-image">
+                <img src="./img/camo1.png" alt="Camote Frito 30gr">
+            </div>
             <h3 class="product-title">Camote Frito</h3>
             <p class="product-weight">30 gramos</p>
+            <p class="product-price">3 Bs.</p>
             <p class="product-description">Camote frito dulce y crujiente, snack saludable.</p>
             <button class="buy-button">Comprar</button>
         </div>
 
         <div class="product-card">
-            <div class="product-image">Camote Frito 100gr</div>
+            <div class="product-image">
+                <img src="./img/camote-100gr.jpg" alt="Camote Frito 100gr">
+            </div>
             <h3 class="product-title">Camote Frito</h3>
             <p class="product-weight">100 gramos</p>
+            <p class="product-price">10 Bs.</p>
             <p class="product-description">Porción familiar de camote frito, naturalmente dulce.</p>
             <button class="buy-button">Comprar</button>
         </div>
 
         <div class="product-card">
-            <div class="product-image">Camote Frito 250gr</div>
+            <div class="product-image">
+                <img src="./img/camote-250gr.jpg" alt="Camote Frito 250gr">
+            </div>
             <h3 class="product-title">Camote Frito</h3>
             <p class="product-weight">250 gramos</p>
+            <p class="product-price">20 Bs.</p>
             <p class="product-description">Tamaño ideal para compartir el dulce sabor del camote.</p>
             <button class="buy-button">Comprar</button>
         </div>
