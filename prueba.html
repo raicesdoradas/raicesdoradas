@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raíces Doradas - Snacks Naturales</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+     <style>
+         :root {
             --color-green: #038C3E;
             --color-beige: #F2CF8D;
             --color-orange: #F28C0F;
@@ -19,26 +21,28 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif; /* Fuente para el texto general */
         }
 
         body {
             background-color: var(--color-beige);
-             padding-bottom: 5rem; /* Añade espacio al final para que los botones sociales no se superpongan */
+            padding-bottom: 7rem;
+            line-height: 1.6;
         }
 
         header {
-            background-color: var(--color-green);
-            color: white;
-            padding: 1rem;
+            background: linear-gradient(to right, var(--color-green), #027335 );
+             padding: 1.5rem 0;
             display: flex;
             align-items: center;
             gap: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .header-logo {
             width: 150px;
             flex-shrink: 0;
+             margin-left: 2rem;
         }
 
         .header-logo img {
@@ -53,21 +57,26 @@
             text-align: center;
         }
 
-        .header-content h1,
+         .header-content h1{
+               font-family: 'Montserrat', sans-serif;
+           color: white;
+           margin-bottom: 0.5rem;
+           font-weight: 700;
+        }
         .header-content p {
             font-family: 'Montserrat', sans-serif;
-            color: white; /* Asegura que el color del texto sea blanco */
+            color: white;
+          font-weight: 400;
         }
 
 
         .social-buttons {
             position: fixed;
             right: 20px;
-            bottom: 20px; /* Ajuste para que los botones sociales se queden abajo */
-            top: unset;
+            bottom: 20px;
             transform: none;
             display: flex;
-             flex-direction: row; /* Cambiado a fila para el diseño horizontal */
+            flex-direction: row;
             gap: 1rem;
             z-index: 100;
         }
@@ -83,11 +92,12 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            transition: transform 0.3s;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .social-buttons a:hover {
             transform: scale(1.1);
+            background-color: #d67307;
         }
 
         .social-buttons a.whatsapp {
@@ -107,7 +117,7 @@
             background-color: white;
             border-radius: 10px;
             padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
 
@@ -128,12 +138,15 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            border-radius: 8px;
         }
 
         .product-title {
             color: var(--color-brown-dark);
             margin-bottom: 0.5rem;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .product-weight {
@@ -144,7 +157,7 @@
 
         .product-price {
             color: var(--color-green);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }
@@ -152,7 +165,7 @@
          .product-description {
             color: #666;
             margin-bottom: 1rem;
-             line-height: 1.5; /* Para mayor legibilidad */
+            line-height: 1.6;
         }
 
         .buy-button {
@@ -160,20 +173,22 @@
             color: white;
             border: none;
             padding: 0.75rem 1.5rem;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            width: 100%;
+             width: 100%;
             font-size: 1rem;
-            transition: background-color 0.3s;
-            text-align: center; /* Asegura la alineación del texto en el botón */
-            display: inline-block; /* Permite que el botón tenga un ancho del 100% */
-            text-decoration: none; /* Elimina el subrayado del enlace */
+           transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            display: inline-block;
+             text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
         }
 
         .buy-button:hover {
             background-color: #d67307;
+            transform: translateY(-2px);
         }
-
 
         @media (max-width: 768px) {
             header {
@@ -184,6 +199,7 @@
 
             .header-logo {
                 width: 120px;
+                margin-left: 0;
             }
 
            .social-buttons {
@@ -195,6 +211,35 @@
                 flex-direction: row;
             }
         }
+
+         footer {
+            background-color: var(--color-brown-dark);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            margin-top: 2rem;
+            position: relative;
+           bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+         .footer-container {
+             max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+         .footer-section h3 {
+              margin-bottom: 0.5rem;
+               font-size: 1.2rem;
+                font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .footer-section {
+              margin-bottom: 1rem;
+           }
     </style>
 </head>
 <body>
@@ -219,65 +264,113 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
-
-    <div class="products-container">
-        <!-- Papa Frita -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="./img/papa1.png" alt="Papa Frita 30gr">
-            </div>
-            <h3 class="product-title">Papa Frita</h3>
-            <p class="product-weight">30 gramos</p>
-            <p class="product-price">3 Bs.</p>
-            <p class="product-description">Deliciosas papas fritas crujientes, perfectamente sazonadas.</p>
-            <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="./img/papa-100gr.jpg" alt="Papa Frita 100gr">
-            </div>
-            <h3 class="product-title">Papa Frita</h3>
-            <p class="product-weight">100 gramos</p>
-            <p class="product-price">10 Bs.</p>
-            <p class="product-description">Porción familiar de nuestras papas fritas premium.</p>
-           <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="./img/papa-250gr.jpg" alt="Papa Frita 250gr">
-            </div>
-            <h3 class="product-title">Papa Frita</h3>
-            <p class="product-weight">250 gramos</p>
-            <p class="product-price">20 Bs.</p>
-            <p class="product-description">Tamaño ideal para compartir en reuniones y fiestas.</p>
-            <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
-        </div>
-
-        <!-- Yuca Frita -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="./img/yuca1.png" alt="Yuca Frita 30gr">
-            </div>
-            <h3 class="product-title">Yuca Frita</h3>
-            <p class="product-weight">30 gramos</p>
-            <p class="product-price">3 Bs.</p>
-            <p class="product-description">Yuca frita crujiente, un snack tradicional y delicioso.</p>
-           <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
-        </div>
-
-        <!-- Camote Frito -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="./img/camo1.png" alt="Camote Frito 30gr">
-            </div>
-            <h3 class="product-title">Camote Frito</h3>
-            <p class="product-weight">30 gramos</p>
-            <p class="product-price">3 Bs.</p>
-            <p class="product-description">Camote frito dulce y crujiente, snack saludable.</p>
-            <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
-        </div>
+    <div class="content-container">
+         
     </div>
+        <footer style="margin-top: 2rem;">
+            <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre nosotros</h3>
+                <p>Raíces Doradas: Snacks naturales con sabor a felicidad.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: info@raicesdoradas.com</p>
+                 <p>WhatsApp: <a href="https://wa.link/xw747a" target="_blank" style="color: white; text-decoration: none;">+591 77777777</a></p>
+            </div>
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <a href="/" style="color: white; text-decoration: none;">Inicio</a><br>
+                    <a href="?page=productos" style="color: white; text-decoration: none;">Productos</a><br>
+                    <a href="acerca.html" style="color: white; text-decoration: none;">Acerca de nosotros</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes sociales</h3>
+                    <a href="https://www.tiktok.com/@raices.doradas0?_t=ZM-8tExga6KhPC&_r=1" target="_blank" style="color: white; text-decoration: none;"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/raices_doradas_chips" target="_blank" style="color: white; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-section">
+                    <p>© 2024 Raíces Doradas. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+         <script>
+          function showContent() {
+             const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page');
+             let content = '';
+
+             if (page === 'productos') {
+                content = `
+                <div class="products-container">
+                     <!-- Papa Frita -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./img/papa1.png" alt="Papa Frita 30gr">
+                        </div>
+                        <h3 class="product-title">Papa Frita</h3>
+                        <p class="product-weight">30 gramos</p>
+                        <p class="product-price">3 Bs.</p>
+                        <p class="product-description">Deliciosas papas fritas crujientes, perfectamente sazonadas.</p>
+                        <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./img/papa-100gr.jpg" alt="Papa Frita 100gr">
+                        </div>
+                        <h3 class="product-title">Papa Frita</h3>
+                        <p class="product-weight">100 gramos</p>
+                        <p class="product-price">10 Bs.</p>
+                        <p class="product-description">Porción familiar de nuestras papas fritas premium.</p>
+                       <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./img/papa-250gr.jpg" alt="Papa Frita 250gr">
+                        </div>
+                        <h3 class="product-title">Papa Frita</h3>
+                        <p class="product-weight">250 gramos</p>
+                        <p class="product-price">20 Bs.</p>
+                        <p class="product-description">Tamaño ideal para compartir en reuniones y fiestas.</p>
+                        <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
+                    </div>
+
+                    <!-- Yuca Frita -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./img/yuca1.png" alt="Yuca Frita 30gr">
+                        </div>
+                        <h3 class="product-title">Yuca Frita</h3>
+                        <p class="product-weight">30 gramos</p>
+                        <p class="product-price">3 Bs.</p>
+                        <p class="product-description">Yuca frita crujiente, un snack tradicional y delicioso.</p>
+                       <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
+                    </div>
+
+                    <!-- Camote Frito -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./img/camo1.png" alt="Camote Frito 30gr">
+                        </div>
+                        <h3 class="product-title">Camote Frito</h3>
+                        <p class="product-weight">30 gramos</p>
+                        <p class="product-price">3 Bs.</p>
+                        <p class="product-description">Camote frito dulce y crujiente, snack saludable.</p>
+                        <a href="https://wa.link/xw747a" class="buy-button" target="_blank">Comprar</a>
+                    </div>
+                 </div>
+                `;
+            } else {
+                content = `
+                <p style="text-align: center; margin-top: 2rem; font-size: 1.5rem;">¡Bienvenido a la página principal de Raíces Doradas!</p>
+                `;
+            }
+
+              document.querySelector('.content-container').innerHTML = content;
+         }
+             showContent();
+        </script>
 </body>
 </html>
