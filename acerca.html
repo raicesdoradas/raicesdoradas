@@ -6,25 +6,26 @@
     <title>Acerca de Raíces Doradas</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
          :root {
-            --color-green: #038C3E;
-            --color-beige: #F2CF8D;
-            --color-orange: #F28C0F;
-            --color-brown-light: #D9AB91;
-            --color-brown-dark: #400E03;
+            /* Nueva paleta de colores */
+            --color-primary: #524632;      /* Marrón principal */
+            --color-secondary: #8F7E4F;    /* Marrón secundario */
+            --color-accent: #C3C49E;       /* Acento claro */
+            --color-light: #D8FFDD;        /* Verde muy claro */
+            --color-background: #DEDBD8;   /* Beige de fondo */
         }
         body {
              font-family: 'Roboto', sans-serif;
             line-height: 1.6;
              margin: 20px;
-             background-color: var(--color-beige);
+             background-color: var(--color-background);
            color: #333;
            padding: 2rem 0;
         }
         h1 {
-             color: #400E03;
+             color: var(--color-primary); /* Cambiado a marrón principal */
             margin-bottom: 20px;
              text-align: center;
              font-family: 'Montserrat', sans-serif;
@@ -42,7 +43,8 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         header {
-            background: linear-gradient(to right, var(--color-green), #027335 ); /* Degrade al header */
+            /*background: linear-gradient(to right, var(--color-green), #027335 );  Degrade al header */
+            background: var(--color-primary); /* Cambiado a marrón principal */
              padding: 1.5rem 0; /* Aumenta el padding */
             display: flex;
             align-items: center;

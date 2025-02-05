@@ -1,0 +1,532 @@
+:root {
+    /* Nueva paleta de colores */
+    --color-primary: #524632;      /* Marrón principal */
+    --color-secondary: #8F7E4F;    /* Marrón secundario */
+    --color-accent: #C3C49E;       /* Acento claro */
+    --color-light: #D8FFDD;        /* Verde muy claro */
+    --color-background: #DEDBD8;   /* Beige de fondo */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Fuente para el texto general */
+}
+
+body {
+    background-color: var(--color-background);
+    padding-bottom: 7rem;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--color-primary); /* Usando el marrón principal */
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+    width: 150px;
+    flex-shrink: 0;
+    margin-left: 2rem;
+}
+
+.header-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.header-content {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header-content h1{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.header-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+
+.social-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    z-index: 100;
+}
+
+
+.social-buttons a {
+    background-color: var(--color-secondary);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-buttons a:hover {
+    transform: scale(1.1);
+    background-color: #d67307;
+}
+
+.social-buttons a.whatsapp {
+    background-color: #25D366;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.product-title {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-weight {
+    color: var(--color-secondary);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    color: var(--color-primary); /*Usando el color primario*/
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.buy-button {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.buy-button:hover {
+    background-color: #d67307;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .header-logo {
+        width: 120px;
+        margin-left: 0;
+    }
+
+    .social-buttons {
+        position: fixed;
+        bottom: 20px;
+        top: unset;
+        right: 20px;
+        transform: none;
+        flex-direction: row;
+    }
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.footer-section h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer-section {
+    margin-bottom: 1rem;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 900px; /* Ancho máximo del slider */
+    margin: 0 auto 2rem auto;
+    border-radius: 10px;
+    height: 400px; /* Altura fija del slider */
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+    height: 100%; /* Asegura que el slider ocupe toda la altura */
+}
+.slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    height: 100%; /* Asegura que cada slide ocupe toda la altura */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el slide */
+    display: block;
+    border-radius: 10px;
+}
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s; /* Transición para el hover */
+}
+.prev-btn {
+    left: 10px;
+}
+.next-btn {
+    right: 10px;
+}
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0,0,0,0.5);
+    color:#f2cf8d;
+}
+@media (max-width: 768px) {
+    .slider-container {
+        height: 300px; /* Reduce la altura en pantallas más pequeñas */
+    }
+}
+.hero-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, var(--color-background), #f0d9b7);
+    border-radius: 10px;
+}
+.hero-image {
+    width: 300px;
+    border-radius: 10px;
+}
+.hero-image img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 500px;
+}
+.hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+.featured-products {
+    margin: 4rem 0;
+    text-align: center;
+}
+.featured-products h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos adicionales para la trivia */
+.trivia-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.category-selection {
+    margin-bottom: 20px;
+}
+
+#options {
+    list-style: none;
+    padding: 0;
+}
+
+.option {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.selected-correct {
+    background-color: #aaffaa;
+}
+
+.selected-incorrect {
+    background-color: #ffaaaa;
+}
+
+.correct {
+    background-color: #aaffaa;
+}
+
+#next-button {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+/* Estilos para la Hero Section de la Trivia */
+.trivia-hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: var(--color-accent); /* Usando el color de acento */
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.trivia-hero-text {
+    text-align: center;
+    max-width: 500px;
+}
+
+.trivia-hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary); /* Usando el color primario */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.trivia-hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.trivia-hero-image {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.trivia-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Estilos para la Hero Section del Juego de Memoria */
+.memory-hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: var(--color-light); /* Usando el color de acento */
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.memory-hero-text {
+    text-align: center;
+    max-width: 500px;
+}
+
+.memory-hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary); /* Usando el color primario */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.memory-hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.memory-hero-image {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.memory-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+/* Estilos específicos para el juego de memoria (puedes moverlos aquí desde memory.html) */
+.memory-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.memory-card {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.memory-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+.memory-face.front {
+    background-color: #ddd;
+    /* Puedes usar una imagen de fondo aquí */
+    background-image: url('img/card-back.png'); /* Reemplaza con tu imagen */
+    background-size: cover;
+}
+
+.memory-face.back {
+    background-color: #eee;
+    transform: rotateY(180deg);
+}

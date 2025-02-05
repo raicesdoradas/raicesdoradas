@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria Raíces Doradas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para el juego de memoria */
+        .memory-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .memory-card {
+            width: 100%;
+            height: 120px;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .memory-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .memory-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .memory-face.front {
+            background-color: #ddd;
+            /* Puedes usar una imagen de fondo aquí */
+            background-image: url('img/card-back.png'); /* Reemplaza con tu imagen */
+            background-size: cover;
+        }
+
+        .memory-face.back {
+            background-color: #eee;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="header-logo">
+            <img src="img/logo.png" alt="Raíces Doradas Logo">
+        </a>
+        <div class="header-content">
+            <h1>Raíces Doradas</h1>
+            <p>Porque el crunch también tiene sabor a felicidad.</p>
+        </div>
+    </header>
+
+    <div class="memory-container">
+        <h1>¡Juego de Memoria Raíces Doradas!</h1>
+        <p>Encuentra todos los pares de imágenes.</p>
+
+        <div class="memory-grid">
+            <!-- Aquí se generarán las tarjetas -->
+        </div>
+    </div>
+
+    <footer style="margin-top: 2rem;">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre nosotros</h3>
+                <p>Raíces Doradas: Snacks naturales con sabor a felicidad.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: raicesdoradaa@gmail.com</p>
+                <p>WhatsApp: <a href="https://wa.link/xw747a" target="_blank" style="color: white; text-decoration: none;">+591 77777777</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <a href="/" style="color: white; text-decoration: none;">Inicio</a><br>
+                <a href="productos.html" style="color: white; text-decoration: none;">Productos</a><br>
+                <a href="acerca.html" style="color: white; text-decoration: none;">Acerca de nosotros</a>
+                <a href="trivia.html" style="color: white; text-decoration: none;">Trivia</a>
+                <a href="memory.html" style="color: white; text-decoration: none;">Memory Game</a>
+            </div>
+            <div class="footer-section">
+                <h3>Redes sociales</h3>
+                <a href="https://www.tiktok.com/@raices.doradas0?_t=ZM-8tExga6KhPC&_r=1" target="_blank" style="color: white; text-decoration: none;"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/raices_doradas_chips" target="_blank" style="color: white; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-section">
+                <p>© 2024 Raíces Doradas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/memory.js"></script>
+</body>
+</html>
