@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const memoryGrid = document.querySelector('.memory-grid');
     let cards = [
-        { name: 'papa', img: 'img/papa1.jpg' },
-        { name: 'yuca', img: 'img/yuca1.jpg' },
-        { name: 'camote', img: 'img/camo1.jpg' },
-        { name: 'logo', img: 'img/logo.jpg' },
+        { name: 'papa', img: 'img/papat.png' },
+        { name: 'yuca', img: 'img/yucat.png' },
+        { name: 'camote', img: 'img/camotet.png' },
+        { name: 'logo', img: 'img/logo.png' },
         { name: 'par', img: 'img/pareja.png' },
         { name: 'trivia', img: 'img/trivia.png' }
-        //Agrega más pares de imágenes
+        
     ];
 
     cards = cards.concat(cards);
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let secondCard = null;
     let lockBoard = false;
     let errors = 0;
-    const maxErrors = 3;
+    const maxErrors = 5;
     let matchedCards = 0;
     const totalPairs = cards.length / 2;
 
